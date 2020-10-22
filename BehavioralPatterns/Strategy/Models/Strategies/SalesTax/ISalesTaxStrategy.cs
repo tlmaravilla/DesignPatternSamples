@@ -4,8 +4,8 @@ using System.Text;
 
 namespace Strategy.Models.Strategies.SalesTax
 {
-    interface ISalesTaxStrategy
+    public interface ISalesTaxStrategy
     {
-        public decimal GetTaxFor(Order);
+        public decimal GetTaxFor(Order order);
     }
 }
