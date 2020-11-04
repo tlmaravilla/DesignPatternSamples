@@ -9,12 +9,11 @@ namespace MediatorDemo
         {
             var mediator = new ConcreteMediator();
 
-            var dev = new ColleagueDev(mediator);
-            var test = new ColleagueTest(mediator);
+            var dev = new ColleagueDev();
+            var test = new ColleagueTest();
 
-            // Mediator needs to kno about all Colleagues
-            mediator.ColleagueDev = dev;
-            mediator.ColleagueTest = test;
+            mediator.Register(dev);
+            mediator.Register(test);
 
             dev.Send("Hello from DEV World, its better here");
             test.Send("We are the testers, beeboop");

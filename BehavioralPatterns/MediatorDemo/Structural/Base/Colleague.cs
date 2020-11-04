@@ -4,7 +4,7 @@
     {
         protected Mediator Mediator;
 
-        public Colleague(Mediator mediator) => Mediator = mediator;
+        internal void SetMediator(Mediator mediator) => Mediator = mediator;
 
         // SEND MSGS
         public virtual void Send(string message)
